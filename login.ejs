@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+
+  <h1 class="title">Welcome Back 👋</h1>
+
+  <% if (error) { %>
+    <p class="error"><%= error %></p>
+  <% } %>
+
+  <form action="/login" method="POST" class="vertical-form">
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button class="btn full">Login</button>
+  </form>
+
+  <p>Don't have an account?</p>
+  <a href="/signup" class="link">Create one</a>
+
+</div>
+</body>
+</html>

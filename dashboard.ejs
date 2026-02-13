@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1 class="title">Welcome, <%= userName %> 👋</h1>
+
+  <a href="/" class="btn outline full">Go Home</a>
+
+  <hr>
+
+  <form action="/add-task" method="POST" class="vertical-form">
+    <input type="text" name="task" placeholder="Enter task..." required>
+    <button class="btn full">Add Task</button>
+  </form>
+
+  <div class="task-list">
+    <% tasks.forEach(task => { %>
+      <div class="task-row">
+        <form action="/toggle-task/<%= task.id %>" method="POST">
+          <div class="task-column">
+            <input type="checkbox"
+              <%= task.completed ? "checked" : "" %>
+              onchange="this.form.submit()">
+            <span class="<%= task.completed ? 'done' : '' %>">
+              <%= task.text %>
+            </span>
+          </div>
+        </form>
+      </div>
+    <% }) %>
+  </div>
+
+  <div class="bottom-space">
+    <a href="/logout" class="btn danger full">Logout</a>
+  </div>
+
+</div>
+
+</body>
+</html>

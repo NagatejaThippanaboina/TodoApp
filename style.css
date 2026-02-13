@@ -1,0 +1,129 @@
+/* Reset everything properly */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main container */
+.container {
+  width: 400px;
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Titles */
+.main-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: gray;
+  margin-bottom: 25px;
+}
+
+/* Force vertical layout ALWAYS */
+.vertical-group,
+.vertical-form {
+  display: flex;
+  flex-direction: column;   /* THIS FORCES ONE BY ONE */
+  gap: 15px;
+  width: 100%;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn:hover {
+  background: #4338ca;
+}
+
+.outline {
+  background: white;
+  color: #4f46e5;
+  border: 2px solid #4f46e5;
+}
+
+.danger {
+  background: #dc2626;
+}
+
+.danger:hover {
+  background: #b91c1c;
+}
+
+/* Tasks */
+.task-list {
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Each task row vertical */
+.task-row {
+  margin-bottom: 12px;
+}
+
+/* Checkbox + text in proper alignment */
+.task-column {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Completed task style */
+.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Bottom spacing */
+.bottom-space {
+  margin-top: 25px;
+}
+
+/* Error text */
+.error {
+  color: red;
+  margin-bottom: 15px;
+}
+
+.link {
+  color: #4f46e5;
+  text-decoration: none;
+}
